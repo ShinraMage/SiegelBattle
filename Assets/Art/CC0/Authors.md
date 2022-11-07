@@ -7,3 +7,7 @@
 * Arrow.png
   * keys-arrow-wsad-mouse.png
   * InanZen
+* Enemy sprites
+  * Kenny
+* Alien sprites
+  * Kenny
