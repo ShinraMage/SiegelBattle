@@ -1,5 +1,8 @@
 # SiegelBattle
 
+## Unity Version
+2021.3.12 f1(LTS)
+
 ## References:
 https://posetmage.com/resume/Siegel%20Battle/  
 https://posetmage.com/  
