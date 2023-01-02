@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace MySystem
 {
-    public enum Mode
-    {
-        JRPG, ARPG, SLG, FTG
-    }
     public class FTGStatus : MonoBehaviour
     {
 
