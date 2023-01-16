@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         my_system = GameObject.Find("MySystem");
+    }
+
+    public void Selected()
+    {
+
     }
     private void Update()
     {
