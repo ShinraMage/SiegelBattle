@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9042589595065314733}
   - component: {fileID: 9042589595065314734}
-  - component: {fileID: 9042589595065314732}
+  - component: {fileID: 5779245151580689836}
   - component: {fileID: 9042589595065314731}
   m_Layer: 0
   m_Name: hero_6
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9042589595065314732
+--- !u!114 &5779245151580689836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9042589595065314735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8944d93852a846b37139e73f66ba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 99f1df04a35000e418dfb214d14e4e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateInterval: 1

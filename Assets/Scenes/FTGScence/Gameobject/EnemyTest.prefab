@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5892665890802803338}
   - component: {fileID: 2768906802763370925}
   - component: {fileID: 8961111206911862489}
-  - component: {fileID: 279668366553352514}
+  - component: {fileID: 5751184746625578355}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &279668366553352514
+--- !u!114 &5751184746625578355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2556270228016027372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f7c797de514c8947bb3d859b22c963e, type: 3}
+  m_Script: {fileID: 11500000, guid: d9544296c822b9f4f995de184131e562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 8965759677379131287}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 851346517806473609}
   - component: {fileID: 1035735587952420999}
   - component: {fileID: 5650696229412709921}
-  - component: {fileID: -5661885576521159667}
+  - component: {fileID: 6751330314205067719}
   - component: {fileID: 7400086799982042694}
   m_Layer: 0
   m_Name: EnemyTest
@@ -345,7 +345,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-5661885576521159667
+--- !u!114 &6751330314205067719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7974426329738186596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4929e2f85f94a784cba18b6a52ebbc95, type: 3}
+  m_Script: {fileID: 11500000, guid: 6761011c4adfcd54a9e10da71635df89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 0}
@@ -362,7 +362,7 @@ MonoBehaviour:
   updateInterval: 1
   Hitpoints: 5
   MaxHitpoints: 5
-  Healthbar: {fileID: 279668366553352514}
+  Healthbar: {fileID: 5751184746625578355}
   bloodeffect: {fileID: 2507832932111006478, guid: 125043bd1433b2e4d99d64d7e56c7286, type: 3}
 --- !u!95 &7400086799982042694
 Animator:

@@ -9,9 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9156660919876956341}
-  - component: {fileID: 9156660919876956340}
-  - component: {fileID: 9156660919876956343}
-  - component: {fileID: 9156660919876956342}
+  - component: {fileID: 7500978285154447309}
   m_Layer: 0
   m_Name: MySystem
   m_TagString: MySystem
@@ -34,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9156660919876956340
+--- !u!114 &7500978285154447309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,35 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9156660919876956345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d04c30e8eff1594fb034e2ee4e3a8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  g_object_list: []
-  for_debug_var: 0
---- !u!114 &9156660919876956343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9156660919876956345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bf3bfb374725d48bc3dd395afb68d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 935837ce5f10be64ca2f954107453e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   system_mode: 0
   movement: {x: 0, y: 0, z: 0}
   main_camera: {fileID: 0}
---- !u!114 &9156660919876956342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9156660919876956345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06949d18b6980264ab290e144ae9c290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

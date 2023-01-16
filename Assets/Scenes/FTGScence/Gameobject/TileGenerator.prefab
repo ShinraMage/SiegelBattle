@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3210013936081391560}
-  - component: {fileID: 3210013936081391561}
-  - component: {fileID: 3210013936081391559}
+  - component: {fileID: 3562567126109646563}
   m_Layer: 0
   m_Name: TileGenerator
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3210013936081391561
+--- !u!114 &3562567126109646563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,29 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3210013936081391562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34836875757608546aae0b1394fa31e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WallStone: {fileID: 0}
-  runningString: 
-  FloorTilePrefab: {fileID: 0}
-  colorPicker: 0
---- !u!114 &3210013936081391559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210013936081391562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11704faeac53fb4e9a632c57d3f4e9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5042c879e6326df41931804108e83c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 3970177476492986854, guid: 323aeb914bdc8484eab4696032a9e3d2, type: 3}
-  Cursor: {fileID: 4589908310943729510, guid: 4e02e2b6a06891a469012ef1f47a2bad, type: 3}
   Hero: {fileID: 9042589595065314735, guid: 12c88d46d9627fc4eb195868d4e26196, type: 3}
-  NPC: {fileID: 7387849045484793575, guid: 55d1a6d7ec4e22246a9fa298f5cbc3e9, type: 3}
-  Sky: {fileID: 7271984575037180410, guid: f8e69496162ac5b4c9b2dd2b3fe406c3, type: 3}
-  Stairs: {fileID: 0}
   Enemy: {fileID: 7974426329738186596, guid: 30d8fe91c78a11f4b966c27d612feaf9, type: 3}
