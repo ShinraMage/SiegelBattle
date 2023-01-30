@@ -9,10 +9,14 @@ public class PlayerController : MonoBehaviour
     private Vector2 velocity;
     private Vector3 direction;
     private bool hasMoved;
+    private bool isInMenu;
     private GameObject my_system;
+    private GameObject menu;
 
     public float x, y;
     public MySystem.Mode myMode;
+    public GameObject menuPrefab;
+    public EventSystem eventSystem;
 
 
     void Start()
@@ -28,6 +32,13 @@ public class PlayerController : MonoBehaviour
     {
         MySystem.Mode system_mode = my_system.GetComponent<MySystem.Status>().system_mode;
         if (system_mode != myMode) return;
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            isInMenu = true;
+            menu = Instantiate(menuPrefab);
+            //eventSystem.SetSelectedGameObject(menu.Find("jumpButton");
+        }
+        if (isInMenu) return;
         if (velocity.y == 0)
         {
             hasMoved = false;
