@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,9 +36,30 @@ public class PlayerController : MonoBehaviour
         if (system_mode != myMode) return;
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            isInMenu = true;
-            menu = Instantiate(menuPrefab);
-            //eventSystem.SetSelectedGameObject(menu.Find("jumpButton");
+            if(isInMenu)
+            {
+
+                //Component[] components = menu.GetComponents(typeof(Component));
+                //foreach (Component component in components)
+                //{
+                //    Debug.Log(component.ToString());
+                //}
+
+                Destroy(menu);
+
+
+            }
+            else
+            {
+                menu = Instantiate(menuPrefab);
+                Button[] allChildren = menu.GetComponentsInChildren<Button>();
+                foreach (Button child in allChildren)
+                {
+                    Debug.Log(child.gameObject.ToString());
+                }
+                eventSystem.SetSelectedGameObject(allChildren[0].gameObject);
+            }
+            isInMenu ^= true;
         }
         if (isInMenu) return;
         if (velocity.y == 0)

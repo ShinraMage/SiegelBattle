@@ -326,7 +326,7 @@ MonoBehaviour:
   x: 2
   y: 1
   myMode: 3
-  menuPrefab: {fileID: 0}
+  menuPrefab: {fileID: 578491890618263215, guid: c6db19a169cfc7d47a7fc7041e439f48, type: 3}
   eventSystem: {fileID: 1531534268}
 --- !u!61 &784450178
 BoxCollider2D:
@@ -673,7 +673,7 @@ MonoBehaviour:
   x: 2
   y: 1
   myMode: 3
-  menuPrefab: {fileID: 0}
+  menuPrefab: {fileID: 578491890618263215, guid: c6db19a169cfc7d47a7fc7041e439f48, type: 3}
   eventSystem: {fileID: 1531534268}
 --- !u!61 &1264899861
 BoxCollider2D:
