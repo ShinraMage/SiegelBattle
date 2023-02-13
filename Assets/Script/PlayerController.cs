@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 direction;
     private bool hasMoved;
     private bool isInMenu;
+    private bool justCanceled;
     private GameObject my_system;
-    private GameObject menu;
 
     public float x, y;
     public MySystem.Mode myMode;
-    public GameObject menuPrefab;
+    // public GameObject menuPrefab;
+    public GameObject menu;
     public EventSystem eventSystem;
 
 
@@ -30,36 +31,32 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+    public void handleJump()
+    {
+
+    }
+    public void handleCancel()
+    {
+        menu.SetActive(false);
+        isInMenu = false;
+        justCanceled = true;
+    }
     private void Update()
     {
         MySystem.Mode system_mode = my_system.GetComponent<MySystem.Status>().system_mode;
         if (system_mode != myMode) return;
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return) && !isInMenu && !justCanceled)
         {
-            if(isInMenu)
+            // menu = Instantiate(menuPrefab);
+            menu.SetActive(true);
+            Button[] allChildren = menu.GetComponentsInChildren<Button>();
+            foreach (Button child in allChildren)
             {
-
-                //Component[] components = menu.GetComponents(typeof(Component));
-                //foreach (Component component in components)
-                //{
-                //    Debug.Log(component.ToString());
-                //}
-
-                Destroy(menu);
-
-
+                Debug.Log(child.gameObject.ToString());
             }
-            else
-            {
-                menu = Instantiate(menuPrefab);
-                Button[] allChildren = menu.GetComponentsInChildren<Button>();
-                foreach (Button child in allChildren)
-                {
-                    Debug.Log(child.gameObject.ToString());
-                }
-                eventSystem.SetSelectedGameObject(allChildren[0].gameObject);
-            }
-            isInMenu ^= true;
+            eventSystem.SetSelectedGameObject(allChildren[0].gameObject);
+            isInMenu = true;
+            justCanceled = false;
         }
         if (isInMenu) return;
         if (velocity.y == 0)
