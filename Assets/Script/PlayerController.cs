@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool hasMoved;
     private bool isInMenu;
     private bool justCanceled;
-    private GameObject my_system;
+    public GameObject my_system;
 
     public float x, y;
     public MySystem.Mode myMode;
@@ -111,6 +111,10 @@ public class PlayerController : MonoBehaviour
     //MARKER Once we attach an obstacle (contains Collider2D Component)
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(my_system == null)
+        {
+            my_system = GameObject.Find("MySystem");
+        }
         MySystem.Mode system_mode = my_system.GetComponent<MySystem.Status>().system_mode;
         if (system_mode != myMode) return;
         transform.position -= direction;
