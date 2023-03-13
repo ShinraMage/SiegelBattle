@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour
     private bool hasMoved;
     private bool isInMenu;
     private bool justCanceled;
-    public GameObject my_system;
 
+    public GameObject my_system;
+    public GameObject myEntropyController;
     public float x, y;
     public MySystem.Mode myMode;
     // public GameObject menuPrefab;
@@ -33,7 +34,9 @@ public class PlayerController : MonoBehaviour
     }
     public void handleJump()
     {
-
+        Vector3 position = transform.position;
+        float entropy = myEntropyController.GetComponent<EntropyController>().modifyEntropy((int)position.x, (int)position.y);
+        Debug.Log(entropy);
     }
     public void handleCancel()
     {
