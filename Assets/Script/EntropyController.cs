@@ -77,6 +77,7 @@ public class EntropyController : MonoBehaviour
             {
                 position.y += 1;
                 GameObject tile = Instantiate(grassTilePrefab, position, Quaternion.identity);
+                tile.transform.SetParent(transform);
                 tile.transform.localScale = new Vector3(.833f, .714f, 1);
                 _grounds[x, y] = new Ground(tile);
             }

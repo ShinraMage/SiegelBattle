@@ -1,0 +1,143 @@
+{
+  "Enemy": [
+    {
+      "name": "Enemy",
+      "race": "orc",
+      "attributes": {
+        "hp": {
+          "current": 100,
+          "max": 100
+        },
+        "energy": {
+          "current": 20,
+          "max": 50
+        },
+        "move": {
+          "current": 3,
+          "max": 5
+        },
+        "triality": [ 0.2, 0.6, 0.2 ]
+      },
+      "advanced_attributes": {
+        "attack": { "dice": "2d8" },
+        "defense": 4,
+        "magic_attack": { "dice": "1d6" },
+        "magic_defense": 5
+      },
+      "equipment": {
+        "weapon": "Sword",
+        "armor": "Leather",
+        "accessory": "None"
+      },
+      "skills": [
+        "charge",
+        "berserk"
+      ],
+    }
+  ],
+  "Player": [
+    {
+      "name": "Player",
+      "race": "dwarf",
+      "attributes": {
+        "hp": {
+          "current": 250,
+          "max": 300
+        },
+        "energy": {
+          "current": 50,
+          "max": 100
+        },
+        "move": {
+          "current": 5,
+          "max": 7
+        },
+        "triality": [ 0.6, 0.3, 0.1 ]
+      },
+      "advanced_attributes": {
+        "attack": { "dice": "2d13" },
+        "defense": 6,
+        "magic_attack": { "dice": "3d4" },
+        "magic_defense": 7
+      },
+      "equipment": {
+        "weapon": "Ax",
+        "armor": "Chainmail",
+        "accessory": "Talisman"
+      },
+      "skills": [
+        "run",
+        "enchant",
+        "fireball",
+        "heal"
+      ]
+    },
+    {
+      "name": "Player2",
+      "race": "drawf",
+      "attributes": {
+        "hp": {
+          "current": 250,
+          "max": 300
+        },
+        "energy": {
+          "current": 50,
+          "max": 100
+        },
+        "move": {
+          "current": 5,
+          "max": 7
+        },
+        "triality": [ 0.6, 0.3, 0.1 ]
+      },
+      "advanced_attributes": {
+        "attack": { "dice": "2d13" },
+        "defense": 6,
+        "magic_attack": { "dice": "3d4" },
+        "magic_defense": 7
+      },
+      "equipment": {
+        "weapon": "Ax",
+        "armor": "Chainmail",
+        "accessory": "Talisman"
+      },
+      "skills": [
+        "run"
+      ]
+    },
+    {
+      "name": "Player3",
+      "race": "drawf",
+      "attributes": {
+        "hp": {
+          "current": 250,
+          "max": 300
+        },
+        "energy": {
+          "current": 50,
+          "max": 100
+        },
+        "move": {
+          "current": 5,
+          "max": 7
+        },
+        "triality": [ 0.6, 0.3, 0.1 ]
+      },
+      "advanced_attributes": {
+        "attack": { "dice": "2d13" },
+        "defense": 6,
+        "magic_attack": { "dice": "3d4" },
+        "magic_defense": 7
+      },
+      "equipment": {
+        "weapon": "Ax",
+        "armor": "Chainmail",
+        "accessory": "Talisman"
+      },
+      "skills": [
+        "nothing"
+      ]
+    },
+  ]
+} 
+

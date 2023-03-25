@@ -1,0 +1,13 @@
+{
+  "name": "Enemy",
+  "race": "orc",
+  "equipment": {
+    "weapon": "Sword",
+    "armor": "Leather",
+    "accessory": "None"
+  },
+  "skills": [
+    "charge",
+    "berserk"
+  ]
+}
