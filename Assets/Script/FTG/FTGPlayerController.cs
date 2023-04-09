@@ -12,9 +12,11 @@ public class FTGPlayerController : MonoBehaviour
     private Rigidbody2D rigid_body;
     private Animator Anim;
     private float jump_interval = 0.1f;
+    public GameObject FollowObject;
+    public List<Vector3> positionList;
+    public int distance = 1;
+    public float speed = 0.1f;
 
-    private float fallMultiplier = 2.5f;
-    private float lowJumpMultiplier = 2f;
 
     [SerializeField]
     private MySystem.FTGStatus my_system_status;
@@ -23,6 +25,7 @@ public class FTGPlayerController : MonoBehaviour
     void Start()
     {
         Anim = GetComponent<Animator>();
+        FollowObject = GameObject.Find("alienBeige(Clone)");
         my_system_status = GameObject.FindGameObjectWithTag("MySystem").GetComponent<MySystem.FTGStatus>();
         my_system_status.main_camera.GetComponent<FTGCameraControl>().Player = this.gameObject;
 
@@ -66,6 +69,13 @@ public class FTGPlayerController : MonoBehaviour
                     rigid_body.velocity = velocity;
                 }
 
+            }
+            positionList.Add(transform.position);
+
+            if (positionList.Count > distance)
+            {
+                positionList.RemoveAt(0);
+                FollowObject.transform.position = positionList[0];
             }
         }
         else

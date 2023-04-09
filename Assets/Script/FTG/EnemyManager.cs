@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FTGManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
-    private int EnemyMaxhp=100;
-    private int Enemyhp=100;
     private Rigidbody2D rigid_body;
     public Animator Anim;
     [SerializeField]
     private MySystem.FTGStatus my_system_status;
     public float updateInterval = 1;
-    private float lastInterval;
-    private float jump_interval = 0.1f;
     public float Hitpoints;
     public float MaxHitpoints = 5;
     public HealthbarBehaviour Healthbar;
@@ -22,25 +18,23 @@ public class FTGManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         Hitpoints = MaxHitpoints;
         
         my_system_status = GameObject.FindGameObjectWithTag("MySystem").GetComponent<MySystem.FTGStatus>();
         bloodeffect = GameObject.Find("bloodeffect").GetComponent<ParticleSystem>();
-        lastInterval = 0;
         Anim = GetComponent<Animator>();
         rigid_body = gameObject.AddComponent<Rigidbody2D>();
         gameObject.AddComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
         transform.rotation = new Quaternion(0, 0, 0, 0);
 
-        lastInterval += Time.deltaTime;
 
 
         MySystem.Mode system_mode = my_system_status.system_mode;
