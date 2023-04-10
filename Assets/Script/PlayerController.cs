@@ -2,26 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
     private Vector2 velocity;
     private Vector3 direction;
     private bool hasMoved;
-    private GameObject my_system;
+    private bool isInMenu;
+    private bool justCanceled;
 
+    public GameObject my_system;
+    public GameObject myEntropyController;
     public float x, y;
     public MySystem.Mode myMode;
+    // public GameObject menuPrefab;
+    public GameObject menu;
+    public EventSystem eventSystem;
 
 
     void Start()
     {
         my_system = GameObject.Find("MySystem");
     }
+
+    public void Selected()
+    {
+
+    }
+    public void handleJump()
+    {
+        Vector3 position = transform.position;
+        float entropy = myEntropyController.GetComponent<EntropyController>().modifyEntropy((int)position.x, (int)position.y);
+        Debug.Log(entropy);
+    }
+    public void handleCancel()
+    {
+        menu.SetActive(false);
+        isInMenu = false;
+        justCanceled = true;
+    }
     private void Update()
     {
         MySystem.Mode system_mode = my_system.GetComponent<MySystem.Status>().system_mode;
         if (system_mode != myMode) return;
+        if(Input.GetKeyDown(KeyCode.Return) && !isInMenu && !justCanceled)
+        {
+            // menu = Instantiate(menuPrefab);
+            menu.SetActive(true);
+            Button[] allChildren = menu.GetComponentsInChildren<Button>();
+            foreach (Button child in allChildren)
+            {
+                Debug.Log(child.gameObject.ToString());
+            }
+            eventSystem.SetSelectedGameObject(allChildren[0].gameObject);
+            isInMenu = true;
+            justCanceled = false;
+        }
+        if (isInMenu) return;
         if (velocity.y == 0)
         {
             hasMoved = false;
@@ -74,6 +114,10 @@ public class PlayerController : MonoBehaviour
     //MARKER Once we attach an obstacle (contains Collider2D Component)
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(my_system == null)
+        {
+            my_system = GameObject.Find("MySystem");
+        }
         MySystem.Mode system_mode = my_system.GetComponent<MySystem.Status>().system_mode;
         if (system_mode != myMode) return;
         transform.position -= direction;

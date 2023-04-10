@@ -35,4 +35,16 @@ public class Controllables : MonoBehaviour
             nowControlling = toBeControlled;
         }
     }
+
+    public void handleJump()
+    {
+        Debug.Log("jumping");
+        nowControlling.GetComponent<PlayerController>().handleJump();
+    }
+
+    public void handleCancel()
+    {
+        Debug.Log("canceling");
+        nowControlling.GetComponent<PlayerController>().handleCancel();
+    }
 }
