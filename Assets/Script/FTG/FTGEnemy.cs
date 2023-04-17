@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FTGEnemy : MonoBehaviour
+public class FTGEnemy : MonoBehaviour //定義通用的敵人cs檔
 {
     public int health;
     public int damage;

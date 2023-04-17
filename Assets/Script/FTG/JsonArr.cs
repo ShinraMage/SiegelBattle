@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
-public class JsonArr : MonoBehaviour
+public class JsonArr : MonoBehaviour //寫來接JSON檔的資料結構
 {
     string jsonString;
     [System.Serializable]

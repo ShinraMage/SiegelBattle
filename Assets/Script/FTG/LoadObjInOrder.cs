@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadObjInOrder : MonoBehaviour
+public class LoadObjInOrder : MonoBehaviour //scene開始時讀取的物件
 {
     public GameObject Camera;
     public GameObject Hero;

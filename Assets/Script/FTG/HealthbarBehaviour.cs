@@ -10,7 +10,7 @@ public class HealthbarBehaviour : MonoBehaviour
     public Color High;
     public Vector3 Offset;
 
-    public void SetHealth(float health, float maxHealth)
+    public void SetHealth(float health, float maxHealth) //設定HP條的變色
     {
         Slider.gameObject.SetActive(health < maxHealth);
         Slider.value = health;

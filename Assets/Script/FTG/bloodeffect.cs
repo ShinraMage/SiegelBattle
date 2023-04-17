@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bloodeffect : MonoBehaviour
 {
-    public float timetodestroy;
+    public float timetodestroy; //噴血效果出現一段時間後移除
     // Start is called before the first frame update
     void Start()
     {

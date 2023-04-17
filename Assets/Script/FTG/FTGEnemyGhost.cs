@@ -25,11 +25,11 @@ public class FTGEnemyGhost : FTGEnemy
     public new void Start()
     {
         base.Start();
-        string jsonString = File.ReadAllText(Application.dataPath + "/Script/Attribute.json");
+        string jsonString = File.ReadAllText(Application.dataPath + "/Script/Attribute.json"); //讀取共用的json檔
         data = JsonConvert.DeserializeObject<JsonArr.Root>(jsonString);
         Hitpoints = data.Enemy[0].attributes.hp.current;
         MaxHitpoints = data.Enemy[0].attributes.hp.max;
-        waitTime = startWaitTime;
+        waitTime = startWaitTime; //移動完停止的時間
         movePos.position = GetRandomPos();
     }
 
@@ -53,7 +53,7 @@ public class FTGEnemyGhost : FTGEnemy
             }
         }
     }
-    Vector2 GetRandomPos()
+    Vector2 GetRandomPos() //範圍內隨機抽地點移動
     {
         Vector2 rndPos = new Vector2(Random.Range(leftDownPos.position.x, rightUpPos.position.x), Random.Range(leftDownPos.position.y, rightUpPos.position.y));
         return rndPos;

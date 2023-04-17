@@ -25,7 +25,7 @@ public class FTGPlayerController : MonoBehaviour
     void Start()
     {
         Anim = GetComponent<Animator>();
-        FollowObject = GameObject.Find("alienBeige(Clone)");
+        FollowObject = GameObject.Find("alienBeige(Clone)"); //取得跟隨者物件
         my_system_status = GameObject.FindGameObjectWithTag("MySystem").GetComponent<MySystem.FTGStatus>();
         my_system_status.main_camera.GetComponent<FTGCameraControl>().Player = this.gameObject;
 
@@ -70,8 +70,8 @@ public class FTGPlayerController : MonoBehaviour
                 }
 
             }
+            //紀錄操作者的移動軌跡超過一定距離就跟上
             positionList.Add(transform.position);
-
             if (positionList.Count > distance)
             {
                 positionList.RemoveAt(0);
