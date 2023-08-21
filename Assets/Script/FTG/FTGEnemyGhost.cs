@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 
 public class FTGEnemyGhost : FTGEnemy
 {
@@ -26,9 +26,9 @@ public class FTGEnemyGhost : FTGEnemy
     {
         base.Start();
         string jsonString = File.ReadAllText(Application.dataPath + "/Script/Attribute.json");
-        data = JsonConvert.DeserializeObject<JsonArr.Root>(jsonString);
-        Hitpoints = data.Enemy[0].attributes.hp.current;
-        MaxHitpoints = data.Enemy[0].attributes.hp.max;
+        //data = JsonConvert.DeserializeObject<JsonArr.Root>(jsonString);
+        //Hitpoints = data.Enemy[0].attributes.hp.current;
+        //MaxHitpoints = data.Enemy[0].attributes.hp.max;
         waitTime = startWaitTime;
         movePos.position = GetRandomPos();
     }
@@ -67,8 +67,8 @@ public class FTGEnemyGhost : FTGEnemy
             data.Enemy[0].attributes.hp.current = Hitpoints;
             using (StreamWriter sw = new StreamWriter(Application.dataPath + "/Script/Attribute.json"))
             {
-                tojsonfile = JsonConvert.SerializeObject(data);
-                sw.WriteLine(tojsonfile);
+                //tojsonfile = JsonConvert.SerializeObject(data);
+                //sw.WriteLine(tojsonfile);
             }
                 Instantiate(bloodeffect, transform.position, Quaternion.identity);
             if (Hitpoints <= 0)
